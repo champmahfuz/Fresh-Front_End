@@ -1,5 +1,5 @@
 // const backendDomin = "http://localhost:8080";
-const backendDomin = "https://othooy-commerce-backend.onrender.com";
+const backendDomin = "https://fresh-backend-2b5g.onrender.com";
 
 const SummaryApi = {
   signUP: {
