@@ -1,5 +1,5 @@
 // const backendDomin = "http://localhost:8080";
-const backendDomin = "https://fresh-backend-2b5g.onrender.com";
+const backendDomin = "https://fresh-backend-kappa.vercel.app";
 
 const SummaryApi = {
   signUP: {
