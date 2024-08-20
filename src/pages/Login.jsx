@@ -4,7 +4,7 @@ import loginIcons from "../assets/signin.gif";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import { useContext, useState } from "react";
-import SummaryApi from "../common";
+// import SummaryApi from "../common";
 import { toast } from "react-toastify";
 import Context from "../context";
 
@@ -32,14 +32,25 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const dataResponse = await fetch(SummaryApi.signIn.url, {
-      method: SummaryApi.signIn.method,
-      credentials: "include",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+    // const dataResponse = await fetch(SummaryApi.signIn.url, {
+    //   method: SummaryApi.signIn.method,
+    //   credentials: "include",
+    //   headers: {
+    //     "content-type": "application/json",
+    //   },
+    //   body: JSON.stringify(data),
+    // });
+    const dataResponse = await fetch(
+      `https://fresh-backend-kappa.vercel.app/api/signin`,
+      {
+        method: "POST",
+        credentials: "include",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    );
 
     const dataApi = await dataResponse.json();
 
